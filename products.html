@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Products</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="admin_style.css">
+   <!-- Firebase App SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+  <!-- Firebase Firestore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"></script>
+  <script type="module" src="product_script.js"></script>
+  <script src = "admin_script.js"></script>
+  <script type="module" src="valid_auth.js"></script> 
+</head>
+
+<body>
+<!-- add products section starts  -->
+<script type="module" src="admin_script.js"></script>
+<script type="module" src="logout.js"></script>
+<section class="add-products">
+   <form id="product-form">
+      <h3>Add product</h3>
+      <input type="hidden" name="mode" value="add">
+      <input type="text" required placeholder="Enter product name" name="name" maxlength="100" class="box">
+      <input type="text" required placeholder="Enter product price" name="price" class="box">
+      <select name="category" class="box" required>
+        <option value="" disabled selected>Select Category --</option>
+        <option value="Stationery">Stationery</option>
+        <option value="Personal Care">Personal Care</option>
+        <option value="Food&Snacks">Food&Snacks</option>
+        <option value="Beverages">Beverages</option>
+        <option value="Desserts">Desserts</option>
+      </select>
+      <select name="status" class="box" required>
+        <option value="" disabled selected>Current Status --</option>
+        <option value="In Stock">In Stock</option>
+        <option value="Out of Stock">Out of Stock</option>
+      </select>
+      <input type="url" name="imageUrl" class="box" required placeholder="Enter image URL">
+      <!-- Replace select with radio buttons -->
+      <input type="checkbox" id="popular" name="categoryId" value="PopularProduct" style="transform: scale(1.5);">
+      <label for="popular" style="font-size: 2.0rem; margin-right: 3rem;">Popular Product</label>
+
+      <input type="checkbox" id="new" name="categoryId" value="NewProduct" style="transform: scale(1.5);">
+      <label for="new" style="font-size: 2.0rem;">New Product</label>
+      <input type="submit" value="Add Product" class="btn" style="font-size: 1.5rem;">
+    </form>
+</section>
+
+
+
+<!-- add products section ends -->
+
+<!-- show products section starts  -->
+
+<section class="show-products" style="padding-top: 0;">
+   <div class="box-container" id="product-list">
+      <!-- Dynamic products will be injected here -->
+   </div>
+</section>
+
+
+<!-- show products section ends -->
+
+   <!-- custom js file link  -->
+   <script src="admin_script.js"></script>
+   <script src="product_script.js"></script>
+
+</body>
+</html>

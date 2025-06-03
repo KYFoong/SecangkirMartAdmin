@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Update Profile</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="admin_style.css">
+   <script src = "admin_script.js"></script>
+   <script type="module" src="profile.js"></script>
+   <script type="module" src="valid_auth.js"></script> 
+
+</head>
+ 
+<body>
+
+   <script type="module" src="admin_script.js"></script>
+   <script type="module" src="logout.js"></script>
+<!-- admin profile update section starts  -->
+
+<section class="form-container">
+
+   <form id="update-profile">
+      <h3>update profile</h3>
+      <input type="text" name="username" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')" placeholder="Enter new username">
+      <input type="password" name="old_pass" maxlength="20" placeholder="Enter your old password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="new_pass" maxlength="20" placeholder="Enter your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="confirm_pass" maxlength="20" placeholder="Confirm your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="update now" name="submit" class="btn">
+   </form>
+
+</section>
+
+<!-- admin profile update section ends -->
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="admin_script.js"></script>
+
+</body>
+</html>

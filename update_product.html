@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Update Product</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="admin_style.css">
+   <!-- Firebase App SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+  <!-- Firebase Firestore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"></script>
+   <script type="module" src="update_product.js"></script>
+   <script src = "admin_script.js"></script>
+   <script type="module" src="valid_auth.js"></script> 
+</head>
+
+<body>
+   <script type="module" src="admin_script.js"></script>
+   <script type="module" src="logout.js"></script>
+<!-- update product section starts  -->
+<section class="update-product">
+   <h1 class="heading">update product</h1>
+
+   <form id="update-form">
+      <input type="hidden" name="mode" value="update">
+      <input type="hidden" name="pid" value="">
+      <input type="hidden" name="old_image" value="">
+      <img src="" alt="Product Image">
+      
+      <span>Update Name</span>
+      <input type="text" required placeholder="Enter product name" name="name" maxlength="100" class="box" value="">
+      
+      <span>Update Price</span>
+      <input type="text" required placeholder="Enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box" value="">
+      
+      <span>Update Category</span>
+      <select name="category" class="box" required>
+         <option value="" disabled selected>Select Category --</option>
+         <option value="Stationery">Stationery</option>
+         <option value="Personal Care">Personal Care</option>
+         <option value="Food&Snacks">Food&Snacks</option>
+         <option value="Beverages">Beverages</option>
+         <option value="Desserts">Dessert</option>
+      </select>
+      
+      <span>Update Stock Status</span>
+      <select name="status" class="box" required>
+         <option value="" disabled selected>Current Status --</option>
+         <option value="In Stock">In Stock</option>
+         <option value="Out of Stock">Out of Stock</option>
+      </select>
+      
+      <span>Update Image</span>
+      <input type="url" name="imageUrl" class="box" required placeholder="Enter image URL">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <input type="checkbox" id="popular" name="categoryId" value="PopularProduct" style="transform: scale(1.5);">
+        <label for="popular" style="font-size: 2.0rem; margin-right: 3rem; margin-left: 0.2rem;">Popular Product</label>
+        <input type="checkbox" id="new" name="categoryId" value="NewProduct" style="transform: scale(1.5);">
+        <label for="new" style="font-size: 2.0rem; margin-left: 0.2rem;">New Product</label>
+      </div>
+      <div class="flex-btn">
+         <input type="submit" value="update" class="btn" name="update">
+         <a href="products.html" class="option-btn">Go Back</a>
+      </div>
+
+   </form>
+</section>
+<!-- update product section ends -->
+
+
+
+
+<!-- custom js file link  -->
+<script src="admin_script.js"></script>
+<script src="update_product.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Secangkir Mart Admin System</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="admin_style.css">
+   <script src = "admin_header.html"></script>
+   <script type="module" src="dashboard.js"></script>
+    <script type="module" src="valid_auth.js"></script> 
+
+</head>
+ 
+<body>
+    
+   <script type="module" src="admin_script.js"></script>
+<!-- admin dashboard section starts  -->
+<section class="dashboard">
+   <script src="admin_script.js"></script>
+
+
+   <h1 class="heading">Dashboard</h1>
+
+   <div class="box-container">
+
+   <div class="box">
+      <h3>Welcome!</h3>
+      <p id="admin-name">AdminName</p>
+      <a href="update_profile.html" class="btn">Update Profile</a>
+   </div>
+
+   <div class="box">
+      <h3><span>Product List</span></h3>
+      <p id="product-count">Number</p>
+      <a href="products.html" class="btn">View Product</a>
+   </div>
+
+   <div class="box">
+      <h3><span>Customer Order</span></h3>
+      <p id="order-count">Number</p>
+      <a href="placed_order.html" class="btn">View Order</a>
+   </div>
+
+   <div class="box">
+      <h3><span>Feedback Received</span></h3>
+      <p id="feedback-count">Number</p>
+      <a href="message.html" class="btn">View Feedback</a>
+   </div>
+
+   </div>
+
+</section>
+
+<!-- admin dashboard section ends -->
+</body>
+</html>
